@@ -10,6 +10,6 @@
   },
   "scripts": {
     "start-tests": "mocha tests/*.js",
-    "start-app": "node index.js"
+    "start": "node index.js"
   }
 }
