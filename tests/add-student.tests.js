@@ -1,7 +1,7 @@
 const assert = require('assert');
 const fetch = require('node-fetch');
 
-//test comment
+//test comment again
 suite('Add Students page', function() {
   test('Page title', async function() {
     let res = await fetch("http://localhost:8888/add-student");
