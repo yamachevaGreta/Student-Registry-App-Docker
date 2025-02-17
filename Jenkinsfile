@@ -26,7 +26,6 @@ pipeline {
                 script {
                     echo 'Starting the application...'
                     bat 'start /B npm start' // Runs in the background
-                    bat 'timeout /T 5'      // Waits 5 seconds before proceeding
                 }
             }
         }
