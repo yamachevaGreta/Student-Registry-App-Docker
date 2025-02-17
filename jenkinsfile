@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo 'Installing dependencies...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -25,7 +25,8 @@ pipeline {
             steps {
                 script {
                     echo 'Starting the application...'
-                    sh 'npm start & sleep 5' // Ensures the app has time to start before proceeding
+                    bat 'start /B npm start' // Runs in the background
+                    bat 'timeout /T 5'      // Waits 5 seconds before proceeding
                 }
             }
         }
@@ -34,7 +35,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running Mocha tests...'
-                    sh 'npm run start-tests'
+                    bat 'npm run start-tests'
                 }
             }
         }
